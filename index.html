@@ -6,7 +6,17 @@
     <head>
         <meta charset="UTF-8">
         <title>Welcome to Matchmaker Web Version!</title>
+        <style>
+          body {
+            background-image: url('heartplane.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+          </style>
     </head>
+
+    
 
     <body>
         <h1>Matchmaker Web Version</h1>
@@ -69,7 +79,9 @@
 
         <br /><br /><br />
         <button onclick="calculateCompatability()">Calculate Compatability!</button>
-        <p id="Compatability"></p>
+        <p id="compatability"></p>
+       
+  
   
 
     <script>
@@ -126,8 +138,8 @@
             let question1Compatability = 5 - Math.abs(question1Response - DESIRED_RESPONSE[0])
             let question2Compatability = 5 - Math.abs(question2Response - DESIRED_RESPONSE[1])
             let question3Compatability = 5 - Math.abs(question3Response - DESIRED_RESPONSE[2])
-            let question3Compatability = 5 - Math.abs(question3Response - DESIRED_RESPONSE[3])
-            let question3Compatability = 5 - Math.abs(question3Response - DESIRED_RESPONSE[4])
+            let question4Compatability = 5 - Math.abs(question4Response - DESIRED_RESPONSE[3])
+            let question5Compatability = 5 - Math.abs(question5Response - DESIRED_RESPONSE[4])
 
             console.log("c1="+question1Compatability);
             console.log("c2="+question2Compatability);
@@ -145,7 +157,7 @@
 
 
 
-            document.getElementById("compatibility").innerHTML = "Your compatability is: " + totalCompatability;
+            document.getElementById("compatability").innerHTML = "Your compatability is: " + totalCompatability;
         }
 
     </script>
